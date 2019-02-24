@@ -39,6 +39,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    solution = Solution()
-    print(solution.two_sum([1, 3, 5, 7], 10))  # -> [1, 3]
-    print(solution.two_sum([1, 3, 5, 7], 8))  # -> [1, 2]
+    s = Solution()
+    print(s.two_sum([1, 3, 5, 7], 10))  # -> [1, 3]
+    print(s.two_sum([1, 3, 5, 7], 8))  # -> [1, 2]
