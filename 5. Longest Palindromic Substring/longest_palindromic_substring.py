@@ -15,16 +15,21 @@ class Solution:
     """
 
     def naive_longest_palindromic_substring(self, s):
+        """
+        Have a nested for loop to go through all possible substrings. Then use
+        another loop to verify that the substring is a palindrome,
+        Time Complexity: O(n^3)
+        """
         longest_palindrome = ""
         n = len(s)
 
         for i in range(n):
             for j in range(n):
-                if i < j:
-                    substring_length = j - i
+                if i <= j:
+                    substring_length = len(s[i:j+1])
                     if substring_length == 1 and \
-                        len(s[i:j]) > len(longest_palindrome):
-                        longest_palindrome = s[i:j]
+                        len(s[i:j+1]) > len(longest_palindrome):
+                        longest_palindrome = s[i:j+1]
                         continue
                     k = 0
                     is_palindrome = True
@@ -33,7 +38,7 @@ class Solution:
                             is_palindrome = False
                             break
                         k += 1
-                    if is_palindrome and len(s[i:j]) > len(longest_palindrome):
+                    if is_palindrome and substring_length > len(longest_palindrome):
                         longest_palindrome = s[i:j+1]
                         continue
         return longest_palindrome
@@ -42,5 +47,7 @@ class Solution:
 if __name__ == "__main__":
     s = Solution()
 
-    print(s.naive_longest_palindromic_substring("babad"))  # -> "bab" or "aba"
+    print(s.naive_longest_palindromic_substring("babad"))  # -> "bab"
     print(s.naive_longest_palindromic_substring("cbbd"))  # -> "bb"
+    print(s.naive_longest_palindromic_substring("abcd"))  # -> "a"
+    print(s.naive_longest_palindromic_substring("bananas"))  # -> "anana"
