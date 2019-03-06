@@ -30,8 +30,10 @@ class Solution:
         matrix going down. Once you hit the last row, zigzag back up. At the
         end, go through the matrix once more and concatenate the zigzagged
         values to a new string and return it.
-        Time Complexity: O(s*n)
+        Time Complexity: O(s * n)
         """
+        if num_rows == 1:
+            return s
         matrix = [['0' for i in range(len(s))] for j in range(num_rows)]
         i = 0
         j = 0
@@ -57,8 +59,32 @@ class Solution:
                     zigzag += col
         return zigzag
 
+    def zigzag_conversion(self, s, num_rows):
+        """
+        Create a list of size equal to the number of rows. Iterate through the
+        string and append each character to the appropriate index in the list.
+        Essentially going back and forth between the indices (zigzag).
+        Time Complexity: O(n)
+        """
+        if num_rows == 1 or num_rows >= len(s):
+            return s
+        zigzag = [''] * num_rows
+        i = 0
+        step = 1
+
+        for char in s:
+            zigzag[i] += char
+            if i == 0:
+                step = 1
+            elif i == num_rows - 1:
+                step = -1
+            i += step
+        return ''.join(zigzag)
+
+
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.naive_zigzag_conversion("PAYPALISHIRING", 3))  # -> "PAHNAPLSIIGYIR"
-    print(s.naive_zigzag_conversion("PAYPALISHIRING", 4))  # -> "PINALSIGYAHRPI"
+    print(s.zigzag_conversion("PAYPALISHIRING", 3))  # -> "PAHNAPLSIIGYIR"
+    print(s.zigzag_conversion("PAYPALISHIRING", 4))  # -> "PINALSIGYAHRPI"
+
