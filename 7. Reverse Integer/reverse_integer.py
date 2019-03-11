@@ -43,7 +43,7 @@ class Solution:
             digit_list = [i for i in str(x)[1:]]
         else:
             digit_list = [i for i in str(x)]
-        
+
         digit_list = digit_list[::-1]
 
         i = 0
@@ -59,12 +59,32 @@ class Solution:
             return 0
         return reversed_integer
 
+    def reverse_integer(self, x):
+        """
+        Similar runtime as the naive implementation, but the code is much more
+        clean and easier to understand. If the number is positive, cast it to a
+        string and reverse it before casting it back to an int. If it's a
+        negative number then do the same as above without including the
+        negative sign, and then add it back to the reversed string before
+        casting to an int.
+        Time Complexity: O(n)
+        """
+        reversed = None
+        if x >= 0:
+            reversed = int(str(x)[::-1])
+        else:
+            reversed = int('-' + (str(x)[1::])[::-1])
+
+        if reversed < -2**31 or reversed > 2**31 - 1:
+            return 0
+        return reversed
+
 
 if __name__ == "__main__":
     s = Solution()
-    print(s.naive_reverse_integer(123))  # -> 321
-    print(s.naive_reverse_integer(-123))  # -> -321
-    print(s.naive_reverse_integer(120))  # -> 21
-    print(s.naive_reverse_integer(0))  # -> 0
-    print(s.naive_reverse_integer(-10))  # -> -1
-    print(s.naive_reverse_integer(1534236469))  # -> 0
+    print(s.reverse_integer(123))  # -> 321
+    print(s.reverse_integer(-123))  # -> -321
+    print(s.reverse_integer(120))  # -> 21
+    print(s.reverse_integer(0))  # -> 0
+    print(s.reverse_integer(-10))  # -> -1
+    print(s.reverse_integer(1534236469))  # -> 0
