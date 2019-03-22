@@ -61,6 +61,13 @@ class Solution:
     """
 
     def string_to_integer(self, s):
+        """
+        Strip the whitespace and convert the string into a list. Keep track of
+        whether the number is negative and remove the +/- sign if it exists.
+        While the character is a digit, append it to a new string and return
+        that string converted back to an integer.
+        Time Complexity: O(n)
+        """
         s = list(s.strip())
         if len(s) == 0:
             return 0
