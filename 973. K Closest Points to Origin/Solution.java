@@ -48,12 +48,12 @@ class Solution {
         return Math.sqrt(Math.pow(coordinates[0], 2) + Math.pow(coordinates[1], 2));
     }
 
-    private void printAnswer(int[][] coordinates) {
+    private String printAnswer(int[][] coordinates) {
         StringBuilder s = new StringBuilder();
         for (int[] c : coordinates) {
             s.append("[").append(c[0]).append(", ").append(c[1]).append("]\n");
         }
-        System.out.println(s);
+        return s;
     }
 
     public static void main(String[] args) {
@@ -61,7 +61,7 @@ class Solution {
 
         int[][] test1 = new int[][]{{1, 3}, {-2, 2}};
         int[][] test2 = new int[][]{{3, 3}, {5, -1}, {-2, 4}};
-        s.printAnswer(s.kClosest(test1, 1)); // [[-2, 2]]
-        s.printAnswer(s.kClosest(test2, 2)); // [[-2, 4], [3, 3]]
+        System.out.println(s.printAnswer(s.kClosest(test1, 1))); // [[-2, 2]]
+        System.out.println(s.printAnswer(s.kClosest(test2, 2))); // [[-2, 4], [3, 3]]
     }
 }
