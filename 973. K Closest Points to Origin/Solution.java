@@ -47,7 +47,7 @@ class Solution {
         for (int[] c : coordinates) {
             s.append("[").append(c[0]).append(", ").append(c[1]).append("]\n");
         }
-        return s;
+        return s.toString();
     }
 
     public static void main(String[] args) {

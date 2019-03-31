@@ -15,5 +15,6 @@ class Solution {
         int[][] test3 = new int[][] { { 1, 1, 3, 3 }, { 0, 0, 2, 2 } };
         System.out.println(s.isRectangleOverlap(test1[0], test1[1])); // true
         System.out.println(s.isRectangleOverlap(test2[0], test2[1])); // false
+        System.out.println(s.isRectangleOverlap(test3[0], test3[1])); // true
     }
 }

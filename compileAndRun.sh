@@ -1,3 +1,3 @@
 #!/bin/bash
 
-javac $1 && java Solution && rm Solution.class
+javac Solution.java && java Solution && rm Solution.class
