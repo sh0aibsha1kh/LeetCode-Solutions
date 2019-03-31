@@ -49,9 +49,9 @@ class Solution {
     }
 
     private void printAnswer(int[][] coordinates) {
-        String s = "";
+        StringBuilder s = new StringBuilder();
         for (int[] c : coordinates) {
-            s += "[" + c[0] + ", " + c[1] + "]\n";
+            s.append("[").append(c[0]).append(", ").append(c[1]).append("]\n");
         }
         System.out.println(s);
     }
