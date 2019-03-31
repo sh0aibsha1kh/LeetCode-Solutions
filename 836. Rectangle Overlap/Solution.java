@@ -1,7 +1,10 @@
 class Solution {
     /**
-     * Returns whether or not the rectangles overlap Verify the conditions of the
-     * corners of one rectangle being less than the corners of the other rectangle.
+     * Returns whether or not the rectangles overlap.
+     * 
+     * Verify the conditions of the corners of one rectangle being less than the
+     * corners of the other rectangle.
+     * 
      * Time Complexity: O(1)
      */
     public boolean isRectangleOverlap(int[] rec1, int[] rec2) {

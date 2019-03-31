@@ -2,9 +2,12 @@ import java.util.PriorityQueue;
 
 class Solution {
     /**
-     * Returns the K closest coordinates to the origin. Put all the coordinates into
-     * a max heap of size K. Then, create a new array and load all of the elements
-     * remaining in the heap into the array. Time Complexity: O(n log k)
+     * Returns the K closest coordinates to the origin.
+     * 
+     * Put all the coordinates into a max heap of size K. Then, create a new array
+     * and load all of the elements remaining in the heap into the array.
+     * 
+     * Time Complexity: O(n log k)
      */
     public int[][] kClosest(int[][] points, int K) {
         PriorityQueue<int[]> maxHeap = new PriorityQueue<>((int[] a, int[] b) -> {
