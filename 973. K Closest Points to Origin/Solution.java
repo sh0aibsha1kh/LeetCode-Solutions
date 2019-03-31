@@ -6,6 +6,8 @@ class Solution {
      * Put all the coordinates into a max heap of size K. Then, create a new array and load all of the elements
      * remaining in the heap into the array.
      *
+     * Time Complexity: O(n log k)
+     *
      * @param points the list of coordinates
      * @param K      the required number of closest coordinates
      * @return an array of K closest coordinates
