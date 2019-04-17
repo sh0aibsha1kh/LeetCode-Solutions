@@ -3,6 +3,9 @@ import java.util.HashMap;
 
 class Solution {
     /**
+     * Returns an array of the two indices of the two integers that add up to the
+     * target sum.
+     * 
      * Loop through the array once while storing the values and indices inside a
      * dictionary to help retrieve the complementary index.
      * 

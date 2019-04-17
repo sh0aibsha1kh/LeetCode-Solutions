@@ -3,6 +3,9 @@ import java.util.HashMap;
 
 class Solution {
     /**
+     * Returns the length of the longest substring without repeating characters in a
+     * given string.
+     * 
      * Loop through the string once and keep track of the longest substring without
      * repeating characters as well as its starting index. For each iteration, if
      * the character has been seen AND the starting index is less than or equal to
