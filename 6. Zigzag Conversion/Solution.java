@@ -3,6 +3,8 @@ import java.util.HashMap;
 
 class Solution {
     /**
+     * Return a zigzagged version of the given string.
+     * 
      * Create a list of size equal to the number of rows. Iterate through the
      * string and append each character to the appropriate index in the list.
      * Essentially going back and forth between the indices (zigzag).
