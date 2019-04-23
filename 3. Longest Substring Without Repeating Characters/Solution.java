@@ -3,7 +3,7 @@ import java.util.HashMap;
 
 class Solution {
     /**
-     * Returns the length of the longest substring without repeating characters in a
+     * Return the length of the longest substring without repeating characters in a
      * given string.
      * 
      * Loop through the string once and keep track of the longest substring without
