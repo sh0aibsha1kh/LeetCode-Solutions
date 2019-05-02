@@ -3,6 +3,8 @@ import java.util.ArrayList;
 
 class Solution {
     /**
+     * Return a list of possible letter combinations.
+     * 
      * Do a depth first search on every digit and once the path length is equal to
      * the length of the input digits, append that path to the combinations array.
      * 

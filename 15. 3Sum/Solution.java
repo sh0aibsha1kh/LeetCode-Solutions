@@ -4,7 +4,7 @@ import java.util.List;
 
 class Solution {
     /**
-     * Return a list of triplets (numbers that sum to zero)
+     * Return a list of triplets (numbers that sum to zero).
      * 
      * First sort the array and then loop through all triplets by maintaining three
      * pointers (while excluding duplicate values) and if the sum of the three
